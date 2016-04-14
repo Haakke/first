@@ -45,7 +45,7 @@ public class AdminFilter implements Filter {
 		String name=(String) session.getAttribute("name");
 		System.out.println(name);
 		
-	if(session.getAttribute("name") == null && !req.getRequestURI().endsWith("admin/RedLogin"))
+	if(session.getAttribute("name") == null && !req.getRequestURI().endsWith("admin/Login.html"))
 			request.getRequestDispatcher("Login.html").forward(request, response);
 			else
 		chain.doFilter(request, response);
